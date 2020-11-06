@@ -97,6 +97,44 @@ local 時間
 
 	%RANDOM%
 
+## 讀取設定檔
+
+準備 .config 的設定檔 (Ref: [如何透過檔案總管建立 .gitignore 或 .editorconfig 等只有副檔名的檔案
+](https://blog.miniasp.com/post/2017/01/01/Create-gitignore-editorconfig-from-Windows-Explorer))
+
+其中開頭的 ; 會被當作註解
+
+	C:\home\ws\wsms-149>type .config
+	; 使用 name=value 的格式
+
+	picFwPath=production\20201105\OBD_tracker_v1.0.5_prod.unified.hex
+	nrfFwPath=production\20201105\nrf_unified_v1.0.1.hex
+	uartComPort=COM4
+	relayComPort=COM2
+
+read_config.bat 的內容
+
+	@echo off
+
+	for /F "eol=; tokens=1,2 delims==" %%i in (.config) do (
+		@echo %%i =	%%j
+		set %%i=%%j
+	)
+
+	:: echo.
+	:: set
+
+	pause
+
+執行結果
+
+	C:\home\ws\wsms-149>read_config.bat
+	picFwPath =     production\20201105\OBD_tracker_v1.0.5_prod.unified.hex
+	nrfFwPath =     production\20201105\nrf_unified_v1.0.1.hex
+	uartComPort =   COM4
+	relayComPort =  COM2
+	請按任意鍵繼續 . . .
+
 
 ## 參考資源
 
