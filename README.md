@@ -69,6 +69,12 @@ delay 5 秒
 	echo %1
 	echo %2
 
+for-loop
+
+	for %%x in (1 2 3) do (
+		echo %%x
+	)
+
 
 ## 變數
 
