@@ -94,6 +94,7 @@ local 時間
 
 ## 參考資源
 
+* [Batch file – Programming tutorial](http://www.trytoprogram.com/batch-file)
 * [batch 指令筆記](https://blog.poychang.net/note-batch/)
 * [我的 Windows 平台自動化經驗：基礎批次檔撰寫實務](https://www.slideshare.net/WillHuangTW/windows-batch-scripting-for-begineers)
 * [Windows Batch 常用命令](https://dotblogs.com.tw/grayyin/2016/07/28/171747)
